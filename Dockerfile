@@ -50,7 +50,7 @@ ENTRYPOINT [ "/sbin/tini", "--", "/usr/local/bin/sass -s ${SASS_STYLE} --watch -
 ARG INTERNAL_VERSION
 ARG GIT_COMMIT
 ARG BUILD_DATE
-LABEL dev.asifbacchus.docker.internalVerson=${INTERNAL_VERSION}
+LABEL dev.asifbacchus.docker.internalVerson="${INTERNAL_VERSION}-${SASS_VERSION}"
 LABEL org.opencontainers.image.version="Dart-SASS ${SASS_VERSION}"
 LABEL org.opencontainers.image.revision=${GIT_COMMIT}
 LABEL org.opencontainers.image.created=${BUILD_DATE}
