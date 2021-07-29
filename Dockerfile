@@ -53,10 +53,14 @@ ENV PATH=$PATH:/opt/dart-sass
 ENV TZ=Etc/UTC
 ENV SASS_STYLE=compressed
 
+# copy scripts and set permissions
+COPY [ "entrypoint.sh", "/usr/local/bin/entrypoint.sh" ]
+RUN chown root:root /usr/local/bin/entrypoint.sh \
+    && chmod 755 /usr/local/bin/entrypoint.sh
+
 # switch to user account and run sass compiler
 USER sass
-ENTRYPOINT [ "/usr/bin/tini", "--" ]
-CMD /opt/dart-sass/sass -s ${SASS_STYLE} --watch --poll --stop-on-error /sass:/css
+ENTRYPOINT [ "/usr/bin/tini", "--", "/usr/local/bin/entrypoint.sh" ]
 
 # set build timestamp, git and version labels
 ARG INTERNAL_VERSION
