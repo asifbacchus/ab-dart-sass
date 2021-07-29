@@ -12,7 +12,7 @@ ARG SASS_UID=8101
 ARG SASS_GID=8101
 RUN addgroup -g ${SASS_GID} -S sass \
     && adduser -S -u ${SASS_UID} -G sass -H -g 'sass system user' sass \
-    && mkdir /sass/sass /sass/css \
+    && mkdir -p /sass/sass /sass/css \
     && chown -R sass:sass /sass
 
 # download dart-sass, tini and timezone support, update all packages
