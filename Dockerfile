@@ -22,7 +22,7 @@ RUN apk --update --no-cache add \
     && apk --update --no-cache upgrade \
     && wget https://github.com/sass/dart-sass/releases/download/${SASS_VERSION}/dart-sass-${SASS_VERSION}-linux-x64.tar.gz \
         -O /tmp/dart-sass-${SASS_VERSION}.tar.gz \
-    && tar -zxvf /tmp/dart-sass-${SASS_VERSION}.tar.gz dart-sass/sass -C /usr/local/bin/sass \
+    && tar -zxvf /tmp/dart-sass-${SASS_VERSION}.tar.gz dart-sass/sass -C /usr/local/bin/ --strip-components=1 \
     && chmod +x /usr/local/bin/sass
 
 # labels
