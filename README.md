@@ -45,7 +45,7 @@ You can download this container either from DockerHub or from my private reposit
 | docker.asifbacchus.dev/dart-sass/ab-dart-sass:*tag* | private repository |
 | asifbacchus/ab-dart-sass:*tag*                      | DockerHub          |
 
-Images are synced from my private repository to DockerHub so, in rare cases, you may find slightly more up-to-date versions in my repository. All specific point releases (e.g. 1.1 or 1.1.2) will be signed using [CodeNotary](https://www.codenotary.com) and can be verified using their *vcn* tool. Non-specific releases (such as ‘1’, ‘2’ or ‘latest’) are not signed since they are always changing with new updates.
+Images are synced from my private repository to DockerHub so, in rare cases, you may find slightly more up-to-date versions in my repository. All specific point releases (e.g. 1.1 or 1.1.2) are signed using [CodeNotary](https://www.codenotary.com) and can be verified using their *vcn* tool. Non-specific releases (such as ‘1’, ‘2’ or ‘latest’) will carry the signature corresponding to the point-release upon which they are based.
 
 ## Permissions
 
