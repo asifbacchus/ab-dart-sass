@@ -60,7 +60,7 @@ RUN chown root:root /usr/local/bin/entrypoint.sh \
 
 # switch to user account and run sass compiler
 USER sass
-ENTRYPOINT [ "/usr/bin/tini", "--", "/usr/local/bin/entrypoint.sh" ]
+ENTRYPOINT [ "/usr/bin/tini", "-e", "143", "--", "/usr/local/bin/entrypoint.sh" ]
 
 # set build timestamp, git and version labels
 ARG INTERNAL_VERSION
