@@ -11,7 +11,7 @@ elif [ "$1" = "oneshot" ]; then
 elif [ -n "$1" ]; then
     exec "$@"
 else
-    exec /opt/dart-sass/sass -s "$SASS_STYLE" --watch --poll --stop-on-error /sass:/css
+    exec /opt/dart-sass/sass -s "$SASS_STYLE" --watch --poll /sass:/css
 fi
 
 exit $?
