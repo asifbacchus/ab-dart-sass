@@ -54,9 +54,9 @@ ENV TZ=Etc/UTC
 ENV SASS_STYLE=compressed
 
 # copy scripts and set permissions
-COPY [ "entrypoint.sh", "/usr/local/bin/entrypoint.sh" ]
-RUN chown root:root /usr/local/bin/entrypoint.sh \
-    && chmod 755 /usr/local/bin/entrypoint.sh
+COPY [ "entrypoint.sh", "/usr/local/bin/" ]
+RUN chown root:root /usr/local/bin/*.sh \
+    && chmod 755 /usr/local/bin/*.sh
 
 # switch to user account and run sass compiler
 USER sass
