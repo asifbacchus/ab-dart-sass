@@ -2,10 +2,10 @@
 # Dart-SASS compiler on Debian-Slim
 #
 
-ARG DEBIAN_VERSION=buster-slim
+ARG DEBIAN_VERSION=bullseye-slim
 FROM debian:${DEBIAN_VERSION}
 ARG DEBIAN_VERSION
-ARG SASS_VERSION=1.36.0
+ARG SASS_VERSION=1.49.9
 
 # create a limited user to run sass
 ARG SASS_UID=8101
